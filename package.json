@@ -1,0 +1,33 @@
+{
+  "name": "gatsby-plugin-i18n-pages-from-json",
+  "description": "Create i18n GatsbyJS pages from JSON configuration",
+  "version": "1.0.0",
+  "author": "Mikko Vänskä <mikkovanska.com@gmail.com>",
+  "dependencies": {
+    "@babel/runtime": "^7.10.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "babel-preset-gatsby": "^0.5.9",
+    "cross-env": "^5.2.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "i18n"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": ">2.0.0-alpha"
+  },
+  "repository": "https://github.com/vanska/gatsby-plugin-i18n-pages-from-json",
+  "scripts": {
+    "build": "babel src --out-dir . --ignore \"**/__tests__\"",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore \"**/__tests__\""
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}
