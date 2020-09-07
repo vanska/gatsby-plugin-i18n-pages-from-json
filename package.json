@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-i18n-pages-from-json",
   "description": "Create i18n GatsbyJS pages from JSON configuration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mikko Vänskä <mikkovanska.com@gmail.com>",
   "dependencies": {
     "@babel/runtime": "^7.10.3"
