@@ -12,7 +12,7 @@ npm install --dev vanska/gatsby-plugin-pages-from-json vanska/tiny-i18n
 
 - Remove dependency of tiny-i18n
 
-## Querying locale data from Gatsby pages
+## JSON configuration
 
 ```js
 // config/site-config.json
