@@ -1,10 +1,10 @@
 const path = require('path')
 const fs = require('fs')
 
-exports.createPages = async ({
-  graphql,
-  actions: { createPage, createRedirect },
-}) => {
+exports.createPages = async (
+  { graphql, actions: { createPage, createRedirect } },
+  pluginOptions,
+) => {
   const i18nNamespacesQuery = await graphql(`
     query {
       allI18NNamespaces {
@@ -21,8 +21,8 @@ exports.createPages = async ({
 
   // console.log("i18nNamespacesQuery\n", i18nNamespacesQuery);
 
-  const siteConfigJsonPath = path.resolve('./config/site-config.json')
-  const siteConfig = JSON.parse(fs.readFileSync(siteConfigJsonPath))
+  // const siteConfigJsonPath = path.resolve('./config/site-config.json')
+  const siteConfig = JSON.parse(fs.readFileSync(pluginOptions.siteConfigPath))
   // console.log("siteConfig\n", siteConfig);
 
   const configPages = siteConfig.pages
